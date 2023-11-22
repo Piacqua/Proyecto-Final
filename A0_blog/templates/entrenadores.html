@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+
+<body>
+    <div class="text-center">
+        <h1>Entrenadores</h1>
+        <h4>Aquí puedes encontrar un listado de todos nuestros entrenadores</h4>
+        <a href="{% url 'registrarse_como_entrenador' %}">Regístrate como entrenador aquí</a>
+        <p class="mb-4"></p>
+        <a href="{% url 'lista_entrenadores' %}">Ver todos</a>
+        <p class="mb-4"></p>
+        <form action="{% url 'busqueda_entrenador' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="busqueda">
+            <input type="submit" value="Buscar">
+        </form>
+        <br class="mb-4">
+        {% if total %}
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Experiencia</th>
+                    <th></th>
+                </tr>
+                {% for entrenador in total %}
+                <tr>
+                    <td>{{entrenador.nombre}}</td>
+                    <td>{{entrenador.edad}}</td>
+                    <td>{{entrenador.experiencia}}</td>
+                    {% if user.is_authenticated %}
+                    <td>
+                        {% if user == entrenador.creador or user.is_staff %}
+                        <a href="{% url 'editar_entrenador' entrenador.id %}">Editar</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if user == entrenador.creador or user.is_staff %}
+                        <form action="{% url 'borrar_entrenador' entrenador.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="submit" value="Borrar" />
+                        </form>
+                        {% endif %}
+                    </td>
+                    {% else %}
+                    <td></td>
+                    <td></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        {% else %}
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Experiencia</th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+        <p>No hay entradas aún.</p>
+    </div>
+    {% endif %}
+</body>
+{% endblock %}

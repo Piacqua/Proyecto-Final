@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div class="text-center">
+  <h2>Confirme que desea eliminar su usuario</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Eliminar" />
+  </form>
+  <p></p>
+  <a href="{% url 'edit' %}">Cancelar</a>
+  <p></p>
+</div>
+{% endblock contenido %}

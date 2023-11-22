@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div class="text-center">
+    <h2>Registro de Entrenadores</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p></p>
+        {{ formulario.as_p }}
+        <input class="btn btn-success" type="submit" value="Enviar Información" />
+    </form>
+    <br>
+    <a href="{% url 'lista_entrenadores' %}">Ver el listado de Entrenadores</a>
+    <p></p>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div class="text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">Registro</h1>
+        <h4 class="text-center">Recuerda ingresar la información correspondiente en cada campo.</h4>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="text-center">
+            <input type="submit" class="btn btn-dark" value="Registrarse" />
+          </div>
+          <p></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}
