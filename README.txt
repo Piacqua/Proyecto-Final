@@ -10,7 +10,7 @@
 		.- Registrarse como Usuario
 		.- Ingresar al "Home" (Inicio)
 		.- Ingresar al "About" (Sobre Mí)
-		.- Revisar y realizar busquedas especificas en el
+		.- Revisar y realizar busquedas específicas en el
 			listado de árbitros, boxeadores y entrenadores
 	
 	- Un usuario registrado podrá:
