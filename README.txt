@@ -44,7 +44,7 @@
 		1.- Crear una carpeta raíz/base/madre
 		2.- Clonar el repositorio con el siguiente comando:
 			
-			$ git clone [link del repositorio]
+			$ git clone https://github.com/Piacqua/Proyecto-Final.git
 
 	PASO 1
 		--- DESCARGAR LAS DEPENDENCIAS ---
