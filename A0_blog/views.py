@@ -60,7 +60,7 @@ def Boxeadores_form(request):
             return redirect(url_exitosa)
     else:  # GET
         formulario = Boxeador_Formulario(
-            initial={"nombre": f"{user.first_name} {user.first_name}"}
+            initial={"nombre": f"{user.first_name} {user.last_name}"}
         )
     http_response = render(
         request=request,
