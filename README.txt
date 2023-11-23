@@ -37,7 +37,7 @@
 			
 -------------------------------------
 
- INSTALACION
+ INSTALACION Y USO
 
 	PASO 0
 		--- DESCARGAR EL REPOSITORIO ---
@@ -52,6 +52,17 @@
 		2.- Instalar las dependencias con el siguiente comando:
 			
 			$ pip install -r requeriments.txt
+
+	PASO 2
+		--- REGISTRAR SUPERUSER ---
+		1.- Ubicarse en la carpeta que contiene el archivo "manage.py"
+		2.- Registrar un superusuario ingresando el comando:
+			a
+			$ python manage.py createsuperuser
+
+		3.- Luego de iniciar el servidor ingresar en:
+
+			127.0.0.1:8000/admin
 
 	PASO 2
 		--- INICIAR SERVIDOR ---
