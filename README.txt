@@ -10,7 +10,7 @@
 		.- Registrarse como Usuario
 		.- Ingresar al "Home" (Inicio)
 		.- Ingresar al "About" (Sobre Mí)
-		.- Revisar y realizar busquedas especificas en el
+		.- Revisar y realizar busquedas específicas en el
 			listado de árbitros, boxeadores y entrenadores
 	
 	- Un usuario registrado podrá:
@@ -44,7 +44,7 @@
 		1.- Crear una carpeta raíz/base/madre
 		2.- Clonar el repositorio con el siguiente comando:
 			
-			$ git clone [link del repositorio]
+			$ git clone https://github.com/Piacqua/Proyecto-Final.git
 
 	PASO 1
 		--- DESCARGAR LAS DEPENDENCIAS ---
