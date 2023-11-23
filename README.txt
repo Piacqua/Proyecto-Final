@@ -64,7 +64,7 @@
 
 			127.0.0.1:8000/admin
 
-	PASO 2
+	PASO 3
 		--- INICIAR SERVIDOR ---
 		1.- Ubicarse en la carpeta que contiene el archivo "manage.py"
 		2.- Iniciar el servidor con el siguiente comando:
